@@ -1,11 +1,11 @@
 musicians = ['David Gilmour', 'Roger Waters', 'Richard Wright', 'Nick Mason']
+# index           0                  1               2                3
 
 # SIZE
 musicians.count
 musicians.length
 musicians.size
 
-# index           0          1          2      3
 
 # CRUD(Create, Read, Update, delete)
 
@@ -19,7 +19,6 @@ musicians[0]
 
 # Update
 musicians[1] = "Fabio Simoes"
-musicians
 
 # Delete
 musicians.delete_at(0)
