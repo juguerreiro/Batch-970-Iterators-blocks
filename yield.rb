@@ -1,17 +1,21 @@
-# def timer
-#   start_time = Time.now
-#   # DO SOME WORK
-#   yield
-#   end_time = Time.now
-#   puts "Elapsed time: #{end_time - start_time}s"
-# end
+# YIELD
 
-# timer do
-#   puts "Starting the work....."
-#   sleep (3)
-#   puts "Finished the work!"
-# end
+def timer
+  start_time = Time.now
+  # DO SOME WORK
+  yield
+  end_time = Time.now
+  puts "Elapsed time: #{end_time - start_time}s"
+end
 
+timer do
+  puts "Starting the work....."
+  sleep (3)
+  puts "Finished the work!"
+end
+
+
+# YIELD WITH PARAMETERS
 
 def beautify_name(first_name, last_name)
   full_name = "#{first_name.capitalize} #{last_name.upcase}"
@@ -23,6 +27,7 @@ end
 
 message = beautify_name("john", "lennon") do |banana, coconut|
   # banana = "John LENNON"
+  # coconut = "John Lennon"
   "Hi, #{banana}! #{coconut}"
 end
 
